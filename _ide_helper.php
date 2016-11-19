@@ -12409,7 +12409,7 @@ namespace {
          * @static 
          */
         public static function getNames(){
-            return \Illuminate\View\Factory->getNames();
+            return \Illuminate\View\Factory::getNames();
         }
         
     }
