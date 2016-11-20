@@ -47,7 +47,7 @@ class DummyClass extends Controller
         {{fileSnippet}}
         {{modelName}}::create($requestData);
 
-        Session::flash('flash_message', '{{modelName}} added!');
+        Session::flash('flash_message', '{{modelName}} eklendi!');
 
         return redirect('{{routeGroup}}{{viewName}}');
     }
@@ -96,7 +96,7 @@ class DummyClass extends Controller
         ${{crudNameSingular}} = {{modelName}}::findOrFail($id);
         ${{crudNameSingular}}->update($requestData);
 
-        Session::flash('flash_message', '{{modelName}} updated!');
+        Session::flash('flash_message', '{{modelName}} güncellendi!');
 
         return redirect('{{routeGroup}}{{viewName}}');
     }
@@ -112,7 +112,7 @@ class DummyClass extends Controller
     {
         {{modelName}}::destroy($id);
 
-        Session::flash('flash_message', '{{modelName}} deleted!');
+        Session::flash('flash_message', '{{modelName}} silindi!');
 
         return redirect('{{routeGroup}}{{viewName}}');
     }

@@ -5,20 +5,20 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">%%modelName%% {{ $%%crudNameSingular%%->%%primaryKey%% }}</div>
+                    <div class="panel-heading">Task {{ $task->id }}</div>
                     <div class="panel-body">
 
-                        <a href="{{ url('%%routeGroup%%%%viewName%%/' . $%%crudNameSingular%%->%%primaryKey%% . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle %%modelName%%"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                        <a href="{{ url('admin/tasks/' . $task->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit Task"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
                         {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['%%routeGroup%%%%crudName%%', $%%crudNameSingular%%->%%primaryKey%%],
+                            'url' => ['admin/tasks', $task->id],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true"/>', array(
                                     'type' => 'submit',
                                     'class' => 'btn btn-danger btn-xs',
-                                    'title' => 'Sil %%modelName%%',
-                                    'onclick'=>'return confirm("Silme işlemini onaylayın")'
+                                    'title' => 'Delete Task',
+                                    'onclick'=>'return confirm("Confirm delete?")'
                             ))!!}
                         {!! Form::close() !!}
                         <br/>
@@ -28,9 +28,9 @@
                             <table class="table table-borderless">
                                 <tbody>
                                     <tr>
-                                        <th>ID</th><td>{{ $%%crudNameSingular%%->%%primaryKey%% }}</td>
+                                        <th>ID</th><td>{{ $task->id }}</td>
                                     </tr>
-                                    %%formBodyHtmlForShowView%%
+                                    <tr><th> Name </th><td> {{ $task->name }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

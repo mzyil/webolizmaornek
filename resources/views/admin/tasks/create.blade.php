@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Edit %%modelName%% {{ $%%crudNameSingular%%->%%primaryKey%% }}</div>
+                    <div class="panel-heading">Create New Task</div>
                     <div class="panel-body">
 
                         @if ($errors->any())
@@ -16,14 +16,9 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($%%crudNameSingular%%, [
-                            'method' => 'PATCH',
-                            'url' => ['/%%routeGroup%%%%viewName%%', $%%crudNameSingular%%->%%primaryKey%%],
-                            'class' => 'form-horizontal',
-                            'files' => true
-                        ]) !!}
+                        {!! Form::open(['url' => '/admin/tasks', 'class' => 'form-horizontal', 'files' => true]) !!}
 
-                        @include ('%%viewTemplateDir%%.form', ['submitButtonText' => 'Güncelle'])
+                        @include ('admin.tasks.form')
 
                         {!! Form::close() !!}
 

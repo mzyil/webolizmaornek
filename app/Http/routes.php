@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('admin/posts', 'Admin\\PostsController');
+Route::resource('admin/tasks', 'TasksController');

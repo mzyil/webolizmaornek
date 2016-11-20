@@ -6,13 +6,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    public function user()
-    {
-        return $this->belongsTo("User");
-    }
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'tasks';
 
-    public function role()
-    {
-        return $this->belongsTo("Bican\\Roles\\Models\\Role");
-    }
+    /**
+    * The database primary key value.
+    *
+    * @var string
+    */
+    protected $primaryKey = 'id';
+
+    /**
+     * Attributes that should be mass-assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['"name'];
+
+    
 }
