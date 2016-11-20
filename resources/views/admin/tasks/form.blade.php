@@ -1,8 +1,8 @@
-<div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
-    {!! Form::label('name', 'Name', ['class' => 'col-md-4 control-label']) !!}
+<div class="form-group {{ $errors->has('isim') ? 'has-error' : ''}}">
+    {!! Form::label('isim', 'İsim', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::text('name', null, ['class' => 'form-control']) !!}
-        {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+        {!! Form::text('isim', null, ['class' => 'form-control']) !!}
+        {!! $errors->first('isim', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
 

@@ -20,7 +20,7 @@ class TasksController extends Controller
     {
         $tasks = Task::paginate(25);
 
-        return view('tasks.index', compact('tasks'));
+        return view('admin.tasks.index', compact('tasks'));
     }
 
     /**
@@ -30,7 +30,7 @@ class TasksController extends Controller
      */
     public function create()
     {
-        return view('tasks.create');
+        return view('admin.tasks.create');
     }
 
     /**
@@ -63,7 +63,7 @@ class TasksController extends Controller
     {
         $task = Task::findOrFail($id);
 
-        return view('tasks.show', compact('task'));
+        return view('admin.tasks.show', compact('task'));
     }
 
     /**
@@ -77,7 +77,7 @@ class TasksController extends Controller
     {
         $task = Task::findOrFail($id);
 
-        return view('tasks.edit', compact('task'));
+        return view('admin.tasks.edit', compact('task'));
     }
 
     /**

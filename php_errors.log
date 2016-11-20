@@ -1,0 +1,126 @@
+[18-Nov-2016 15:22:41 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_bz2.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:41 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_curl.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:42 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_gd2.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:42 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_mbstring.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:42 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_mysql.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:42 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_mysqli.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:42 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_openssl.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:42 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_pdo_mysql.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:43 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_pdo_sqlite.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:43 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_sockets.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:43 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_sqlite3.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:22:43 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PROGRA~2\EASYPH~1.1VC\\binaries\php\php_runningversion\ext\php_xsl.dll' - Belirtilen modül bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:28:15 UTC] PHP Warning:  PHP Startup: bz2: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[18-Nov-2016 15:28:15 UTC] PHP Warning:  PHP Startup: curl: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[18-Nov-2016 15:28:15 UTC] PHP Warning:  PHP Startup: gd: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[18-Nov-2016 15:28:16 UTC] PHP Warning:  PHP Startup: mbstring: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[18-Nov-2016 15:28:17 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'D:\Program Files (x86)\EasyPHPDevServer-14.1VC11\binaries\php\php_runningversion\ext\php_mysql.dll' - Belirtilen yordam bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:28:17 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'D:\Program Files (x86)\EasyPHPDevServer-14.1VC11\binaries\php\php_runningversion\ext\php_mysqli.dll' - Belirtilen yordam bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:28:18 UTC] PHP Warning:  PHP Startup: openssl: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[18-Nov-2016 15:28:19 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'D:\Program Files (x86)\EasyPHPDevServer-14.1VC11\binaries\php\php_runningversion\ext\php_pdo_mysql.dll' - Belirtilen yordam bulunamadý.
+ in Unknown on line 0
+[18-Nov-2016 15:28:19 UTC] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[18-Nov-2016 15:28:20 UTC] PHP Warning:  PHP Startup: sockets: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[18-Nov-2016 15:28:20 UTC] PHP Warning:  PHP Startup: sqlite3: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[18-Nov-2016 15:28:21 UTC] PHP Warning:  PHP Startup: xsl: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[19-Nov-2016 10:15:57 UTC] PHP Warning:  PHP Startup: bz2: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[19-Nov-2016 10:15:57 UTC] PHP Warning:  PHP Startup: curl: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[19-Nov-2016 10:15:58 UTC] PHP Warning:  PHP Startup: gd: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[19-Nov-2016 10:15:58 UTC] PHP Warning:  PHP Startup: mbstring: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[19-Nov-2016 10:15:59 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'D:\Program Files (x86)\EasyPHPDevServer-14.1VC11\binaries\php\php_runningversion\ext\php_mysql.dll' - Belirtilen yordam bulunamadý.
+ in Unknown on line 0
+[19-Nov-2016 10:16:00 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'D:\Program Files (x86)\EasyPHPDevServer-14.1VC11\binaries\php\php_runningversion\ext\php_mysqli.dll' - Belirtilen yordam bulunamadý.
+ in Unknown on line 0
+[19-Nov-2016 10:16:01 UTC] PHP Warning:  PHP Startup: openssl: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[19-Nov-2016 10:16:02 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'D:\Program Files (x86)\EasyPHPDevServer-14.1VC11\binaries\php\php_runningversion\ext\php_pdo_mysql.dll' - Belirtilen yordam bulunamadý.
+ in Unknown on line 0
+[19-Nov-2016 10:16:03 UTC] PHP Warning:  PHP Startup: pdo_sqlite: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[19-Nov-2016 10:16:03 UTC] PHP Warning:  PHP Startup: sockets: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[19-Nov-2016 10:16:04 UTC] PHP Warning:  PHP Startup: sqlite3: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
+[19-Nov-2016 10:16:04 UTC] PHP Warning:  PHP Startup: xsl: Unable to initialize module
+Module compiled with module API=20121212
+PHP    compiled with module API=20131226
+These options need to match
+ in Unknown on line 0
