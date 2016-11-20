@@ -8,7 +8,7 @@
                     <div class="panel-heading">Task {{ $task->id }}</div>
                     <div class="panel-body">
 
-                        <a href="{{ url('admin/tasks/' . $task->id . '/edit') }}" class="btn btn-primary btn-xs" title="Edit Task"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                        <a href="{{ url('admin/tasks/' . $task->id . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle Task"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
                         {!! Form::open([
                             'method'=>'DELETE',
                             'url' => ['admin/tasks', $task->id],
@@ -17,8 +17,8 @@
                             {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true"/>', array(
                                     'type' => 'submit',
                                     'class' => 'btn btn-danger btn-xs',
-                                    'title' => 'Delete Task',
-                                    'onclick'=>'return confirm("Confirm delete?")'
+                                    'title' => 'Sil Task',
+                                    'onclick'=>'return confirm("Silme işlemini onaylayın")'
                             ))!!}
                         {!! Form::close() !!}
                         <br/>

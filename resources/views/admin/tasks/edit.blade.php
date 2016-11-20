@@ -23,7 +23,7 @@
                             'files' => true
                         ]) !!}
 
-                        @include ('admin.tasks.form', ['submitButtonText' => 'Update'])
+                        @include ('admin.tasks.form', ['submitButtonText' => 'Güncelle'])
 
                         {!! Form::close() !!}
 
