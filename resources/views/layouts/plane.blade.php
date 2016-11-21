@@ -9,20 +9,20 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>SB Admin 2 - Bootstrap Admin Theme</title>
+	<title>Görev Yönetimi</title>
 
 	<!-- Bootstrap Core CSS -->
-	<link href="{{ asset("resources/css/bootstrap.css") }}" rel="stylesheet">
+	<link href="{{ asset("css/bootstrap.css") }}" rel="stylesheet">
 
 	<!-- MetisMenu CSS -->
-	<link href="{{ asset("resources/css/metisMenu.css") }}" rel="stylesheet">
+	<link href="{{ asset("css/metisMenu.css") }}" rel="stylesheet">
 
 	<!-- Custom CSS -->
-	<link href="{{ asset("resources/css/sb-admin-2.css") }}" rel="stylesheet">
+	<link href="{{ asset("css/sb-admin-2.css") }}" rel="stylesheet">
 
 	<!-- Custom Fonts -->
-	<link href="{{ asset("resources/css/font-awesome.css") }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset("resources/css/timeline.css") }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset("css/font-awesome.css") }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset("css/timeline.css") }}" rel="stylesheet" type="text/css">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,16 +35,16 @@
 <body>
 	@yield('body')
 	<!-- jQuery -->
-	<script src="{{ asset("resources/js/jquery.js") }}"></script>
+	<script src="{{ asset("js/jquery.js") }}"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="{{ asset("resources/js/bootstrap.js") }}"></script>
+	<script src="{{ asset("js/bootstrap.js") }}"></script>
 
 	<!-- Metis Menu Plugin JavaScript -->
-	<script src="{{ asset("resources/js/metisMenu.js") }}"></script>
+	<script src="{{ asset("js/metisMenu.js") }}"></script>
 
 	<!-- Custom Theme JavaScript -->
-	<script src="{{ asset("resources/js/sb-admin-2.js") }}"></script>
-	<script src="{{ asset("resources/js/frontend.js") }}" type="text/javascript"></script>
+	<script src="{{ asset("js/sb-admin-2.js") }}"></script>
+	<script src="{{ asset("js/frontend.js") }}" type="text/javascript"></script>
 </body>
 </html>
