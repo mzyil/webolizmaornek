@@ -33,7 +33,12 @@
 
 </head>
 <body>
-	@yield('body')
+	@include('layouts.navbar')
+	@if (Request::is('login') or Request::is('logout') or Request::is('register') or Request::is('welcome'))
+		@yield('content')
+	@else
+		@yield('body')
+	@endif
 	<!-- jQuery -->
 	<script src="{{ asset("js/jquery.js") }}"></script>
 

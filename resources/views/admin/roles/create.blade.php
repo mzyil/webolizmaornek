@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Edit Post {{ $post->id }}</div>
+                    <div class="panel-heading">Create New role</div>
                     <div class="panel-body">
 
                         @if ($errors->any())
@@ -16,14 +16,9 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($post, [
-                            'method' => 'PATCH',
-                            'url' => ['/admin/posts', $post->id],
-                            'class' => 'form-horizontal',
-                            'files' => true
-                        ]) !!}
+                        {!! Form::open(['url' => '/admin/roles', 'class' => 'form-horizontal', 'files' => true]) !!}
 
-                        @include ('admin.posts.form', ['submitButtonText' => 'Update'])
+                        @include ('admin.roles.form')
 
                         {!! Form::close() !!}
 

@@ -45,6 +45,9 @@ class Handler extends ExceptionHandler
         if ($e instanceof ModelNotFoundException) {
             $e = new NotFoundHttpException($e->getMessage(), $e);
         }
+        if ($e instanceof \Bican\Roles\Exceptions\RoleDeniedException) {
+            return redirect('/');
+        }
 
         return parent::render($request, $e);
     }

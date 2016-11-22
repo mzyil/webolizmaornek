@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Create New Post</div>
+                    <div class="panel-heading">Create New user</div>
                     <div class="panel-body">
 
                         @if ($errors->any())
@@ -16,9 +16,9 @@
                             </ul>
                         @endif
 
-                        {!! Form::open(['url' => '/admin/posts', 'class' => 'form-horizontal', 'files' => true]) !!}
+                        {!! Form::open(['url' => '/admin/users', 'class' => 'form-horizontal', 'files' => true]) !!}
 
-                        @include ('admin.posts.form')
+                        @include ('admin.users.form', ['rolesAll' => $rolesAll])
 
                         {!! Form::close() !!}
 

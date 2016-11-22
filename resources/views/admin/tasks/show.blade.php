@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">task {{ $task->id }}</div>
+                    <div class="panel-heading">{{ $task->name }}</div>
                     <div class="panel-body">
 
                         <a href="{{ url('admin/tasks/' . $task->id . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle task"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>

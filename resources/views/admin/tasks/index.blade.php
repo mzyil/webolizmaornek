@@ -7,10 +7,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Tasks</div>
                     <div class="panel-body">
-
+                        @if(Request::is('admin/*'))
                         <a href="{{ url('/admin/tasks/create') }}" class="btn btn-primary btn-xs" title="task Ekle"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a>
                         <br/>
-                        <br/>
+                        @endif
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <thead>
@@ -19,10 +19,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @if(count($tasks) !== 0)
                                 @foreach($tasks as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->isim }}</td>
+                                        <td>{{ $item->name }}</td>
                                         <td>
                                             <a href="{{ url('/admin/tasks/' . $item->id) }}" class="btn btn-success btn-xs" title="Görüntüle task"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                                             <a href="{{ url('/admin/tasks/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle task"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
@@ -41,6 +42,13 @@
                                         </td>
                                     </tr>
                                 @endforeach
+                                @else
+                                    <tr>
+                                        <td colspan="3" class="text-center">
+                                            <h5>Eklenmiş görev yok.</h5>
+                                        </td>
+                                    </tr>
+                                @endif
                                 </tbody>
                             </table>
                             <div class="pagination-wrapper"> {!! $tasks->render() !!} </div>
