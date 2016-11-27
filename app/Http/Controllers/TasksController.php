@@ -6,11 +6,20 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Task;
+use Bican\Roles\Exceptions\RoleDeniedException;
+use Bican\Roles\Models\Role;
 use Illuminate\Http\Request;
 use Session;
 
 class TasksController extends Controller
 {
+    function __construct()
+    {
+        if (!\Auth::check()) {
+            throw new RoleDeniedException(-1);
+        }
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +27,8 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = Task::paginate(25);
+        $role = \Auth::user()->getRole();
+        $tasks = Task::where('role_id', $role->id)->paginate(25);
 
         return view('admin.tasks.index', compact('tasks'));
     }
@@ -42,9 +52,10 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $requestData = $request->all();
-        
+        array_forget($requestData, '_token');
+
         Task::create($requestData);
 
         Session::flash('flash_message', 'Task added!');
@@ -55,7 +66,7 @@ class TasksController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      *
      * @return \Illuminate\View\View
      */
@@ -69,7 +80,7 @@ class TasksController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      *
      * @return \Illuminate\View\View
      */
@@ -83,17 +94,21 @@ class TasksController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @param \Illuminate\Http\Request $request
      *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function update($id, Request $request)
     {
-        
         $requestData = $request->all();
-        
+        array_forget($requestData, '_token');
+
         $task = Task::findOrFail($id);
+
+        if ($this->taskRoleMatch($task)) {
+            return redirect()->back();
+        }
         $task->update($requestData);
 
         Session::flash('flash_message', 'Task updated!');
@@ -104,7 +119,7 @@ class TasksController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
@@ -115,5 +130,14 @@ class TasksController extends Controller
         Session::flash('flash_message', 'Task deleted!');
 
         return redirect('admin/tasks');
+    }
+
+    private function taskRoleMatch(Task $task, Role $role = null)
+    {
+        if (!\Auth::check()) return null;
+        if ($role === null) {
+            $role = \Auth::user()->getRoles()->first();
+        }
+        return $task->role()->getResults()->id != $role->getKey();
     }
 }

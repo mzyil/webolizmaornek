@@ -22,7 +22,7 @@
 <div class="form-group {{ $errors->has('roles') ? 'has-error' : ''}}">
     {!! Form::label('roles', 'Roller', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::select('roles', $rolesAll , null , ['class' => 'form-control']) !!}
+        {!! Form::select('roles', array_flatten(\Bican\Roles\Models\Role::orderBy('id')->get(['name'])->toArray()) , null , ['class' => 'form-control']) !!}
         {{--{!! Form::password('roles', null, ['class' => 'form-control']) !!}--}}
         {{--{!! $errors->first('roles', '<p class="help-block">:message</p>') !!}--}}
     </div>

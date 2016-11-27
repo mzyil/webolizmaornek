@@ -8,7 +8,7 @@
                     <div class="panel-heading">role {{ $role->id }}</div>
                     <div class="panel-body">
 
-                        <a href="{{ url('admin/roles/' . $role->id . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle role"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                        <a href="{{ url('admin/roles/' . $role->id . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle role"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                         {!! Form::open([
                             'method'=>'DELETE',
                             'url' => ['admin/roles', $role->id],

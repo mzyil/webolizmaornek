@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Bican\Roles\Models\Role;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -18,7 +19,7 @@ class User extends Model implements AuthenticatableContract,
                                     HasRoleAndPermissionContract
 {
     use Authenticatable, Authorizable, CanResetPassword, HasRoleAndPermission{
-        HasRoleAndPermission::can as may;
+        HasRoleAndPermission::can as may; // to solve the conflict
         Authorizable::can insteadof HasRoleAndPermission;
     }
 
@@ -46,5 +47,13 @@ class User extends Model implements AuthenticatableContract,
     public function tasks()
     {
         return $this->hasMany("Task");
+    }
+
+    /**
+     * @return Role
+     */
+    public function getRole()
+    {
+        return $this->getRoles()->first();
     }
 }

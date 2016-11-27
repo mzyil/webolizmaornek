@@ -1,7 +1,7 @@
 @extends('layouts.plane')
 
 @section('body')
-    @if(@!$welcome)
+    @if(@!$welcome) {{--don't show if welcome page--}}
     <div id="wrapper">
         <!-- Navigation -->
         <div class="navbar-default sidebar" role="navigation">
@@ -22,7 +22,7 @@
                         <a href="{{ url ('') }}"><i class="fa fa-dashboard fa-fw"></i> Görevler</a>
                     </li>
                     <li {{ (Request::is('*/users/*') ? 'class="active"' : '') }}>
-                        <a href="{{ url ('admin/users') }}"><i class="fa fa-bar-chart-o fa-fw"></i> Kullanıcı</a>
+                        <a href="{{ url ('admin/users') }}"><i class="fa fa-users fa-fw"></i> Kullanıcılar</a>
                         <!-- /.nav-second-level -->
                     </li>
                     <li {{ (Request::is('*/roles/*') ? 'class="active"' : '') }}>

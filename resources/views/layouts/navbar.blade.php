@@ -28,7 +28,7 @@
                         <li><a href="#">{{ Request::user()->name }}</a></li>
                         <li><a href="{{ url ('logout') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
                     @else
-                        <li><a href="{{ url ('login') }}"><i class="fa fa-sign-out fa-fw"></i> Login</a></li>
+                        <li><a href="{{ url ('login') }}"><i class="fa fa-sign-in fa-fw"></i> Login</a></li>
                     @endif
                 </ul>
                 <!-- /.dropdown-user -->

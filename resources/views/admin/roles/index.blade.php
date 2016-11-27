@@ -8,7 +8,7 @@
                     <div class="panel-heading">Roles</div>
                     <div class="panel-body">
 
-                        <a href="{{ url('/admin/roles/create') }}" class="btn btn-primary btn-xs" title="role Ekle"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a>
+                        <a href="{{ url('/admin/roles/create') }}" class="btn btn-primary btn-xs" title="role Ekle"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
                         <br/>
                         <br/>
                         <div class="table-responsive">
@@ -24,8 +24,8 @@
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td><td>{{ $item->slug }}</td><td>{{ $item->description }}</td>
                                         <td>
-                                            <a href="{{ url('/admin/roles/' . $item->id) }}" class="btn btn-success btn-xs" title="Görüntüle role"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
-                                            <a href="{{ url('/admin/roles/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle role"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                                            <a href="{{ url('/admin/roles/' . $item->id) }}" class="btn btn-success btn-xs" title="Görüntüle role"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                                            <a href="{{ url('/admin/roles/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle role"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                                             {!! Form::open([
                                                 'method'=>'DELETE',
                                                 'url' => ['/admin/roles', $item->id],

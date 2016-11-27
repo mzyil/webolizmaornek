@@ -9,7 +9,7 @@
                     <div class="panel-body">
 
                         <a href="{{ url('admin/users/' . $user->id . '/edit') }}" class="btn btn-primary btn-xs"
-                           title="Düzenle user"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                           title="Düzenle user"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                         {!! Form::open([
                             'method'=>'DELETE',
                             'url' => ['admin/users', $user->id],
