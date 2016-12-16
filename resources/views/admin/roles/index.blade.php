@@ -5,17 +5,17 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Roles</div>
+                    <div class="panel-heading">Gruplar</div>
                     <div class="panel-body">
 
-                        <a href="{{ url('/admin/roles/create') }}" class="btn btn-primary btn-xs" title="role Ekle"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                        <a href="{{ url('/admin/roles/create') }}" class="btn btn-primary btn-xs" title="Grup Ekle"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
                         <br/>
                         <br/>
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th> Name </th><th> Slug </th><th> Description </th><th>İşlemler</th>
+                                        <th>ID</th><th> İsim </th><th> Kısaltma </th><th> Açıklama </th><th>İşlemler</th>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -18,7 +18,7 @@
 
                         {!! Form::open(['url' => '/admin/users', 'class' => 'form-horizontal', 'files' => true]) !!}
 
-                        @include ('admin.users.form', ['rolesAll' => $rolesAll])
+                        @include ('admin.users.form')
 
                         {!! Form::close() !!}
 

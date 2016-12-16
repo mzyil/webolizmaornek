@@ -36,12 +36,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-
-        $roles = Role::all('id','name');
-        foreach ($roles as $role){
-            $rolesAll[$role->id] = $role->name;
-        }
-        return view('admin.users.create', compact('rolesAll'));
+        return view('admin.users.create');
     }
 
     /**
@@ -88,10 +83,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        $roles = Role::all('id','name');
-        foreach ($roles as $role){
-            $rolesAll[$role->id] = $role->name;
-        }
+
         return view('admin.users.edit', compact('user', 'rolesAll'));
     }
 
@@ -105,20 +97,22 @@ class UsersController extends Controller
      */
     public function update($id, Request $request)
     {
-        
+
         $requestData = $request->all();
+        $user = User::findOrFail($id);
         if (isset($requestData['password'])) {
             if ((strlen($requestData['password']) != 0)) {
                 $requestData['password'] = Hash::make($requestData['password']);
+            }else{
+                $requestData['password'] = $user->password;
             }
         }
-        $user = User::findOrFail($id);
         $user->update($requestData);
         $user->detachAllRoles();
         $user->attachRole(Role::findOrFail($requestData['roles']));
         Session::flash('flash_message', 'User güncellendi!');
 
-        return redirect('admin/users');
+        return $this->index();
     }
 
     /**

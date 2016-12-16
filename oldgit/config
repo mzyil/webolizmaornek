@@ -1,9 +1,0 @@
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = false
-	logallrefupdates = true
-[remote "origin"]
-	url = https://mzyil:WAPWAPmelih.90@github.com/mzyil/webolizmaornek.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
-	pushurl = https://mzyil:WAPWAPmelih.90@github.com/mzyil/webolizmaornek.git

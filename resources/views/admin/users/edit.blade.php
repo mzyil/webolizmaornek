@@ -23,7 +23,7 @@
                             'files' => true
                         ]) !!}
 
-                        @include ('admin.users.form', ['submitButtonText' => 'Güncelle', 'rolesAll' => $rolesAll])
+                        @include ('admin.users.form', ['submitButtonText' => 'Güncelle'])
 
                         {!! Form::close() !!}
 

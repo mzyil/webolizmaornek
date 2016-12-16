@@ -18,6 +18,7 @@ class TasksController extends Controller
         if (!\Auth::check()) {
             throw new RoleDeniedException(-1);
         }
+        $this->middleware('role:admin', ['only' => ['store', 'create']]);
     }
 
     /**
@@ -28,7 +29,11 @@ class TasksController extends Controller
     public function index()
     {
         $role = \Auth::user()->getRole();
-        $tasks = Task::where('role_id', $role->id)->paginate(25);
+        if(\Auth::user()->is(1)){ // is admin
+            $tasks = Task::paginate(25);
+        }else{
+            $tasks = Task::where('role_id', $role->id)->paginate(25);
+        }
 
         return view('admin.tasks.index', compact('tasks'));
     }

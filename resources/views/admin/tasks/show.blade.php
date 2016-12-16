@@ -30,7 +30,8 @@
                                     <tr>
                                         <th>ID</th><td>{{ $task->id }}</td>
                                     </tr>
-                                    <tr><th> İsim </th><td> {{ $task->isim }} </td></tr>
+                                    <tr><th> İsim </th><td> {{ $task->name }} </td></tr>
+                                    <tr><th> Sorumlu Grup </th><td> {{ $task->role->name }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

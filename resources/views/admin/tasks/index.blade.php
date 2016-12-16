@@ -8,14 +8,14 @@
                     <div class="panel-heading">Görevler</div>
                     <div class="panel-body">
                         @if(Auth::check())
-                        <a href="{{ url('/admin/tasks/create') }}" class="btn btn-primary btn-xs" title="task Ekle"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+                        <a href="{{ url('/admin/tasks/create') }}" class="btn btn-primary btn-xs" title="Görev Ekle"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
                         <br/>
                         @endif
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th> İsim </th><th> Durum </th>@if(Auth::check())<th>İşlemler</th>@endif
+                                        <th>ID</th><th> İsim </th><th> Durum </th><th>Sorumlu Grup</th>@if(Auth::check())<th>İşlemler</th>@endif
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -25,6 +25,7 @@
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ \App\Task::getStatusDefinitionArray()[$item->status] }}</td>
+                                        <td>{{ $item->role->name }}</td>
                                         @if(Auth::check())
                                         <td>
                                             <a href="{{ url('/admin/tasks/' . $item->id) }}" class="btn btn-success btn-xs" title="Görüntüle task"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>

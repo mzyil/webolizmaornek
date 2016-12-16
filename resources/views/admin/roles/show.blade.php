@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">role {{ $role->id }}</div>
+                    <div class="panel-heading">{{ $role->name }}</div>
                     <div class="panel-body">
 
                         <a href="{{ url('admin/roles/' . $role->id . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle role"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
@@ -30,7 +30,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $role->id }}</td>
                                     </tr>
-                                    <tr><th> Name </th><td> {{ $role->name }} </td></tr><tr><th> Slug </th><td> {{ $role->slug }} </td></tr><tr><th> Description </th><td> {{ $role->description }} </td></tr>
+                                    <tr><th> İsim </th><td> {{ $role->name }} </td></tr><tr><th> Kısaltma </th><td> {{ $role->slug }} </td></tr><tr><th> Açıklama </th><td> {{ $role->description }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

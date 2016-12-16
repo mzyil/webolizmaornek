@@ -24,7 +24,7 @@
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->email }}</td>
-                                        <td>{{ $item->roles()->get(['name'])[0]->name }}</td>
+                                        <td>{{ $item->getRole()->name }}</td>
                                         <td>
                                             <a href="{{ url('/admin/users/' . $item->id) }}" class="btn btn-success btn-xs" title="Görüntüle user"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
                                             <a href="{{ url('/admin/users/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Düzenle user"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
